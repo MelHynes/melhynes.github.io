@@ -11,22 +11,20 @@
 		<h2>Responsive Data Driven Filter Grid &amp; Data Card Component</h2>
 		<div ng-controller="uigridCtrl">
 
-<nav>
-<div class="filter-container">
-  <div class="checkbox-container"  ng-repeat="tag in technologyArray">  
-    <input type="checkbox" name="style" id="{{tag.name}}" value="{{tag.name}}" ng-model="tag.on" ng-change="checkChange()" />
-   <label for="{{tag.name}}">{{tag.name}}</label>
-  </div>
-</div>
-
-<div id="mobileSelect">
-<am-multiselect class="input-lg" multiple="true" ms-selected ="{{bundleTest.length}} project type(s) selected"
-    ng-model="bundleTest" ms-header="Filter by project type"
-    options="tag.name for tag in technologyArray"
-    template-url="./multiselect.tmpl.html"></am-multiselect>
-    </div>
-         
-</nav>
+		<nav>
+			<div class="filter-container">
+			  <div class="checkbox-container"  ng-repeat="tag in technologyArray">  
+			    <input type="checkbox" name="style" id="{{tag.name}}" value="{{tag.name}}" ng-model="tag.on" ng-change="checkChange()" />
+			   <label for="{{tag.name}}">{{tag.name}}</label>
+			  </div>
+			</div>		
+			<div id="mobileSelect">
+				<am-multiselect class="input-lg" multiple="true" ms-selected ="{{bundleTest.length}} project type(s) selected"
+			    ng-model="bundleTest" ms-header="Filter by project type"
+			    options="tag.name for tag in technologyArray"
+			    template-url="./multiselect.tmpl.html"></am-multiselect>
+			</div>		         
+		</nav>
 
 		<section class="products">		
 		  <div class="product-card ng-scope" ng-repeat="product in productData | filter:myFunc">
@@ -53,27 +51,23 @@
 				    <div class="product-info"> 
 				      <h2>{{product.id}}</h2> 
  				      <h3 class="tag-section"> 
-					 <span class="tag" ng-repeat="x in product.tags"> 
-					     <a href="#">{{x}}</a>      
-					 </span> 
+						 <span class="tag" ng-repeat="x in product.tags"> 
+						     <a href="#">{{x}}</a>      
+						 </span> 
 					 </h3> 
  				    </div>
  				    <div class="cta"> 
  				    	<a href="#">LEARN MORE</a>				    	 
  				    </div> 
  				</figure> 
-
 			  </div> 
-
 			</section> 
-
-
 		  </div>
 		</section>	
 		</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="./ui-grid.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/ng-tags-input/2.0.1/ng-tags-input.min.js"></script>
 		<script src="./multiselect.js"></script>
