@@ -56,7 +56,7 @@ nav #mobileSelect {
 }
 
 @media only screen and (max-device-width: 480px) {
-  .product-card { flex: 1 46%; }
+  .product-card { flex: 0 46%; }
   nav .filter-container { display: none; }
   nav #mobileSelect { display: inline-block; }
 }
