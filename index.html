@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Angularjs UI-Grid Example</title>
+		 <meta charset="UTF-8"> 
+		<link rel="stylesheet" href="http://ui-grid.info/release/ui-grid.css" type="text/css">
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="./hero.css" type="text/css">
+	</head>
+	<body ng-app="uigridApp">
+		<h2>Responsive Data Driven Filter Grid &amp; Data Card Component</h2>
+		<div ng-controller="uigridCtrl">
+
+<nav>
+<div class="filter-container">
+  <div class="checkbox-container"  ng-repeat="tag in technologyArray">  
+    <input type="checkbox" name="style" id="{{tag.name}}" value="{{tag.name}}" ng-model="tag.on" ng-change="checkChange()" />
+   <label for="{{tag.name}}">{{tag.name}}</label>
+  </div>
+</div>
+
+<div id="mobileSelect">
+<am-multiselect class="input-lg" multiple="true" ms-selected ="{{bundleTest.length}} project type(s) selected"
+    ng-model="bundleTest" ms-header="Filter by project type"
+    options="tag.name for tag in technologyArray"
+    template-url="./multiselect.tmpl.html"></am-multiselect>
+    </div>
+         
+</nav>
+
+		<section class="products">		
+		  <div class="product-card ng-scope" ng-repeat="product in productData | filter:myFunc">
+			<section class="card-container">
+			  <div  class="card" ng-class="{'flipped':isFlipped}" ng-click="isFlipped=!isFlipped"> 
+ 			    <figure class="front"> 
+					<div class="product-image"> 
+						<div class="corner-ribbon" ng-if="product.featured && !isFlipped">
+						 	<span>FEATURED</span>
+						 </div>
+				      <img src="{{product.image}}">
+				    </div>			
+				    <div class="ellipsis" ng-if="!isFlipped"><div>		     
+				    <div class="product-info">
+				      <h2>{{product.title}}</h2>
+				      
+				      <h3>{{product.description}}</h3>
+				    </div>
+				</figure> 
+ 			    <figure class="back"> 
+ 					<div class="product-image-bak"> 
+				      <img src="{{product.image}}"> 
+ 				    </div> 
+				    <div class="product-info"> 
+				      <h2>{{product.id}}</h2> 
+ 				      <h3 class="tag-section"> 
+					 <span class="tag" ng-repeat="x in product.tags"> 
+					     <a href="#">{{x}}</a>      
+					 </span> 
+					 </h3> 
+ 				    </div>
+ 				    <div class="cta"> 
+ 				    	<a href="#">LEARN MORE</a>				    	 
+ 				    </div> 
+ 				</figure> 
+
+			  </div> 
+
+			</section> 
+
+
+		  </div>
+		</section>	
+		</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="http://ui-grid.info/release/ui-grid.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/ng-tags-input/2.0.1/ng-tags-input.min.js"></script>
+		<script src="./multiselect.js"></script>
+		<script src="./hero.js"></script>
+		<script src="./underscore.js"></script>
+	</body>
+</html>
