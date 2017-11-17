@@ -68,8 +68,6 @@
          	.error(function (data, status, headers, config) {
              	//  Placeholder for actual error handling that would be uniquely created depending on the core environment.
          		alert("The entire Internet is down! Please reboot society and try again.");
-         	});   
-	
-		});
- 
+         	});   	
+	}); 
 }());;
