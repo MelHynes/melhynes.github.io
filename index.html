@@ -4,8 +4,12 @@
 		<title>Angularjs UI-Grid Example</title>
 		<meta charset="UTF-8"> 		
 		<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-		<link rel="stylesheet" href="./ui-grid.css" type="text/css">
-		<link rel="stylesheet" href="./hero.css" type="text/css">
+		<link rel="stylesheet" href="./styles/ui-grid.css" type="text/css">
+		<link rel="stylesheet" href="./styles/base.css" type="text/css">
+		<link rel="stylesheet" href="./styles/banner.css" type="text/css">
+		<link rel="stylesheet" href="./styles/ellipsis.css" type="text/css">
+		<link rel="stylesheet" href="./styles/flipper.css" type="text/css">
+		<link rel="stylesheet" href="./styles/tags.css" type="text/css">
 	</head>
 	<body ng-app="uigridApp">
 		<h2>Responsive Data Driven Filter Grid &amp; Data Card Component</h2>
@@ -25,7 +29,7 @@
 				</div>		         
 			</nav>	
 			<section class="products">		
-			  <div class="product-card ng-scope" ng-repeat="product in productData | filter:myFunc">
+			  <div class="product-card ng-scope" ng-repeat="product in productData | filter:productFilter">
 				<section class="card-container">
 				  <div  class="card" ng-class="{'flipped':isFlipped}" ng-click="isFlipped=!isFlipped"> 
 	 			    <figure class="front"> 
@@ -54,7 +58,7 @@
 						 </h3> 
 	 				    </div>
 	 				    <div class="cta"> 
-	 				    	<a href="#">LEARN MORE</a>				    	 
+	 				    	<a href="#">LEARN MORE</a>	<div id="arrow"></div>			    	 
 	 				    </div> 
 	 				</figure> 
 				  </div> 
@@ -65,9 +69,9 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/ng-tags-input/2.0.1/ng-tags-input.min.js"></script>
-		<script src="./ui-grid.js"></script>
-		<script src="./multiselect.js"></script>
-		<script src="./hero.js"></script>
-		<script src="./underscore.js"></script>
+		<script src="./scripts/ui-grid.js"></script>
+		<script src="./scripts/multiselect.js"></script>
+		<script src="./scripts/base.js"></script>
+		<script src="./scripts/underscore.js"></script>
 	</body>
 </html>

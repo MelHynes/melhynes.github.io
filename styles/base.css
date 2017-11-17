@@ -1,0 +1,134 @@
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,
+del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+b,u,i,center,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary,
+time,mark,audio,video{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    font:inherit;
+    vertical-align:baseline;
+	font-family: Arial;
+}
+
+h2 {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 22px;
+	padding: 5px 5px 15px 5px;
+	text-align: center;
+}
+
+h3 {
+	font-size: 12px;
+	line-height: 1.5em;
+	display: block;
+}
+
+.products {
+  	display: flex;
+  	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.product-card {
+	display: flex;
+  	flex: 0 29%;
+  	min-height: 324px;
+  	max-height:400px;
+	margin: 10px;
+	border: 2px solid #000;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+nav #mobileSelect {
+  	display: none;
+}
+
+.product-image, .product-image-bak {
+	display: block;
+	max-height: 100px;
+	overflow: hidden;
+}
+
+.product-image img {
+  	max-width: 100%;
+	margin-bottom: auto;
+	align-self: stretch;
+}
+
+.product-image-bak img{
+	max-width: 100%;
+	margin-bottom: auto;
+	-webkit-transform: scaleX(-1);
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    opacity: 0.5;
+    align-self: stretch;
+}
+
+.product-info {
+	margin-top: auto;
+	line-height: 14px;
+	text-decoration: none;
+	margin-bottom: 10px;
+}
+
+.cta {
+	position:absolute;
+    bottom:10px;
+    right:25px;
+}
+.cta a {
+	font-size: 12px;
+	color: #000;
+	line-height: 14px;
+	text-decoration: none;
+	
+	:after {
+		position: relative;
+	    content: "";
+	    display: inline-block;
+	    width: 0.6em;
+	    height: 0.6em;
+	    margin-left:2px;
+	    border-right: 0.2em solid black;
+	    border-top: 0.2em solid black;
+	    transform: rotate(45deg);
+	    margin-right: 0.5em;
+	}
+	
+}
+
+/* Mobile select styles */
+
+@media only screen and (max-device-width: 480px) {
+  .product-card { flex: 0 46%; }
+  nav .filter-container { display: none; }
+  nav #mobileSelect { display: inline-block; }
+}
+
+am-multiselect .dropdown-menu{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+am-multiselect .dropdown-menu > li > a {
+    padding: 3px 10px;
+    cursor:pointer;
+}
+
+am-multiselect .dropdown-menu > li.selected {
+    background-color: #ADD8E6;
+}

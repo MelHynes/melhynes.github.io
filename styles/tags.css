@@ -1,0 +1,66 @@
+/* Card-back tag styles */
+
+.tag-section {
+	height: 100%;
+	width: 90%;
+	max-height: 140px;
+	padding: 0 10px;
+	overflow: auto;
+}
+
+.tag {  
+    	float: left; 
+    	margin: 5px;    
+    	height: 29px;
+    	width: auto;
+} 
+ 
+.tag a {
+	background-color: #000;
+    	float: left;    
+    	padding: 5px 7px;
+    	color: #FFF;
+    	font-size: 9pt;
+    	text-decoration: none;    
+    	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4);    
+}
+
+/* Filter desktop tag styles */
+
+.filter-container{
+  	display: flex;
+  	flex-flow: row wrap;
+  	padding: 20px;
+}
+
+.checkbox-container{
+  	display: flex;
+  	flex-flow: row wrap;
+}
+
+input[type="text"] {
+  	margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+    	display: none;
+}
+
+input[type="checkbox"] + label:active,
+input[type="checkbox"]:checked + label {
+  	background-color: #000;
+  	color: #FFF;
+}
+
+label {
+  	margin: 3px;
+  	background-color: #FFF;
+  	text-align: center;
+  	border: 1px solid black;
+  	color: #000;
+  	cursor: pointer;
+  	padding: 5px 7px;
+  	font-size: 9pt;
+  	font-weight: bold;
+  	text-transform: uppercase;
+}
