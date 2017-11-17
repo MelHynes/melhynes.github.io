@@ -96,19 +96,19 @@ nav #mobileSelect {
 	line-height: 14px;
 	text-decoration: none;
 	
-	:after {
-		position: relative;
-	    content: "";
-	    display: inline-block;
-	    width: 0.6em;
-	    height: 0.6em;
-	    margin-left:2px;
-	    border-right: 0.2em solid black;
-	    border-top: 0.2em solid black;
-	    transform: rotate(45deg);
-	    margin-right: 0.5em;
-	}
-	
+}
+
+.cta a:after {
+	position: relative;
+    content: "";
+    display: inline-block;
+    width: 0.6em;
+    height: 0.6em;
+    margin-left:2px;
+    border-right: 0.2em solid black;
+    border-top: 0.2em solid black;
+    transform: rotate(45deg);
+    margin-right: 0.5em;
 }
 
 /* Mobile select styles */
