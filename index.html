@@ -23,9 +23,9 @@
 				</div>		
 				<div id="mobileSelect">
 					<am-multiselect class="input-lg" multiple="true" ms-selected ="{{bundleTest.length}} project type(s) selected"
-				    ng-model="bundleTest" ms-header="Filter by project type"
-				    options="tag.name for tag in technologyArray"
-				    template-url="./multiselect.tmpl.html"></am-multiselect>
+				    	ng-model="bundleTest" ms-header="Filter by project type"
+				    	options="tag.name for tag in technologyArray"
+				    	template-url="./multiselect.tmpl.html"></am-multiselect>
 				</div>		         
 			</nav>	
 			<section class="products">		
@@ -46,21 +46,21 @@
 					    </div>
 					</figure> 
 	 			    <figure class="back"> 
-	 					<div class="product-image-bak"> 
-					      <img src="{{product.image}}"> 
-	 				    </div> 
-					    <div class="product-info"> 
-					      <h2>{{product.id}}</h2> 
-	 				      <h3 class="tag-section"> 
-							 <span class="tag" ng-repeat="x in product.tags"> 
+	 				<div class="product-image-bak"> 
+						<img src="{{product.image}}"> 
+					</div> 
+					<div class="product-info"> 
+						<h2>{{product.id}}</h2> 
+	 				      	<h3 class="tag-section"> 
+							<span class="tag" ng-repeat="x in product.tags"> 
 							     <a href="#">{{x}}</a>      
-							 </span> 
+							</span> 
 						 </h3> 
-	 				    </div>
-	 				    <div class="cta"> 
-	 				    	<a href="#">LEARN MORE</a>	<div id="arrow"></div>			    	 
-	 				    </div> 
-	 				</figure> 
+	 				</div>
+	 				<div class="cta"> 
+	 					<a href="#">LEARN MORE</a>			    	 
+	 				</div> 
+	 			    </figure> 
 				  </div> 
 				</section> 
 			  </div>
