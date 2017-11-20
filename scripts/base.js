@@ -4,8 +4,9 @@
 		.controller("uigridCtrl", function ($scope, $http, $rootScope) {
 			$scope.productData = [];
     		$http.get('https://s3-us-west-1.amazonaws.com/hero-engineering-public/interview/fe-code-challenge.json')
-         	.success(function (data) {
-         		$scope.productData = data.cards;
+         	.then(function (data) {
+         		console.log(data.data.cards);
+         		$scope.productData = data.data.cards;
          		$scope.uniqueTags = function() {
          			  return _.chain($scope.productData)
          			    .pluck('tags')
@@ -64,10 +65,8 @@
          			}
          			return sel;
          		};	        			           			   
-         	})
-         	.error(function (data, status, headers, config) {
-             	//  Placeholder for actual error handling that would be uniquely created depending on the core environment.
-         		alert("The entire Internet is down! Please reboot society and try again.");
-         	});   	
-	}); 
+         	})  
+	
+		});
+ 
 }());;
